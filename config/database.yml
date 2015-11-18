@@ -4,7 +4,8 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: "postgres://cmamiegelwhtpu:_YkoxExIn8JOpAENQe98qLx4UP@ec2-54-83-53-120.compute-1.amazonaws.com:5432/d1nrj6hfjt3vsh"
+default: &default
+  url: "postgres://cmamiegelwhtpu:_YkoxExIn8JOpAENQe98qLx4UP@ec2-54-83-53-120.compute-1.amazonaws.com:5432/d1nrj6hfjt3vsh"
 
 development:
   <<: *default
@@ -19,4 +20,3 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3

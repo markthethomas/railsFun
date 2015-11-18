@@ -20,4 +20,3 @@ test:
 
 production:
   <<: *default
-  url: "postgres://cmamiegelwhtpu:_YkoxExIn8JOpAENQe98qLx4UP@ec2-54-83-53-120.compute-1.amazonaws.com:5432/d1nrj6hfjt3vsh"

@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151121044644) do
+ActiveRecord::Schema.define(version: 20151121222203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pins", force: :cascade do |t|
+    t.string   "url"
+    t.string   "title"
+    t.boolean  "crawled"
+    t.string   "imageUrl"
+    t.string   "remoteImageUrl"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.string   "createdByUser"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"

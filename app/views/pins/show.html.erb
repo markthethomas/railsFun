@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @pin.url %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pin.title %>
+</p>
+
+<p>
+  <strong>Crawled:</strong>
+  <%= @pin.crawled %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @pin.imageUrl %>
+</p>
+
+<p>
+  <strong>Remoteimageurl:</strong>
+  <%= @pin.remoteImageUrl %>
+</p>
+
+<p>
+  <strong>Createdat:</strong>
+  <%= @pin.createdAt %>
+</p>
+
+<p>
+  <strong>Updatedat:</strong>
+  <%= @pin.updatedAt %>
+</p>
+
+<p>
+  <strong>Createdbyuser:</strong>
+  <%= @pin.createdByUser %>
+</p>
+
+<%= link_to 'Edit', edit_pin_path(@pin) %> |
+<%= link_to 'Back', pins_path %>

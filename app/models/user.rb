@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
-  has_many(:posts)
+
+  # Relationships
+  has_many :posts
+  has_many :pins
 
   # Validation
-  validates(:url, presence: true)
-  validates(:title, presence: true)
-  validates(:imageUrl, presence: true)
+  validates :username, presence: true
+  validates :firstName, presence: true
+  validates :lastName, presence: true
 
 end

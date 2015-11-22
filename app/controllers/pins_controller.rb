@@ -1,3 +1,6 @@
+require 'mechanize'
+
+
 class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
@@ -26,6 +29,8 @@ class PinsController < ApplicationController
   # POST /pins.json
   def create
     @pin = Pin.new(pin_params)
+    # @post.createdByUser = current_user.id
+    crawlUrl(@pin.url)
 
     respond_to do |format|
       if @pin.save
@@ -35,6 +40,14 @@ class PinsController < ApplicationController
         format.html { render :new }
         format.json { render json: @pin.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def crawlUrl(url)
+    a = Mechanize.new
+    a.get(url) do |page|
+      @pin.availableImages = page.images
+      @pin.title = page.title
     end
   end
 

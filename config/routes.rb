@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :pins
+  resources :pins
   resources :users
   resources :posts
+
   root 'posts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

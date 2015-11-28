@@ -1,0 +1,30 @@
+{
+  "name": "mewsy",
+  "version": "0.0.1",
+  "description": "learning rails!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markthethomas/railsFun.git"
+  },
+  "author": "Mark Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markthethomas/railsFun/issues"
+  },
+  "homepage": "https://github.com/markthethomas/railsFun#readme",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "browserify": "^12.0.1",
+    "browserify-incremental": "^3.0.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "superagent": "^1.4.0"
+  }
+}

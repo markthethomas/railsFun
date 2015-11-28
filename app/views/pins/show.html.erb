@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<%= react_component('NewPin', @pin, {prerender: true}) %>
+
+<%= link_to 'Edit', edit_pin_path(@pin) %>
+|
+<%= link_to 'Back', pins_path %>

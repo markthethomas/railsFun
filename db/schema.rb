@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118004846) do
+ActiveRecord::Schema.define(version: 20151122010403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pins", force: :cascade do |t|
+    t.string   "url"
+    t.string   "title"
+    t.boolean  "crawled"
+    t.string   "imageUrl"
+    t.string   "remoteImageUrl"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.string   "createdByUser"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "availableImages",              array: true
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -33,6 +47,9 @@ ActiveRecord::Schema.define(version: 20151118004846) do
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "gender"
+    t.string   "language"
+    t.string   "website"
   end
 
 end

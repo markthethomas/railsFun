@@ -2,17 +2,32 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'unicorn'
+
+# Auth
+gem 'bcrypt', '~> 3.1.10'
+
+# JS/Node Stuff
+gem 'browserify-rails'
+gem 'therubyracer'
+gem 'react-rails', '~> 1.4.0'
+
+# UI
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'react-rails', '~> 1.4.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'bcrypt', '~> 3.1.7'
-gem 'unicorn'
+
+# DB
 gem 'pg', '~> 0.18.4'
+
+# Crawling
+gem 'mechanize', '~> 2.7', '>= 2.7.3'
+
+# Deploy
 gem 'capistrano-rails', group: :development
 
 group :development, :test do
@@ -22,9 +37,10 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
+  gem 'passenger'
   gem 'spring'
 end
 
 group :production do
-  gem 'pg', '~> 0.18.4'
+  gem 'passenger'
 end

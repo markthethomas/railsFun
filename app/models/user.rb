@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
-  has_many(:posts)
+
+  # Relationships
+  has_many :posts
+  has_many :pins
 
   # Validation
-  validates(:username, presence: true, length: { maximum: 120, minimum: 4})
-
-  validates(:firstName, presence: true)
-  validates(:lastName, presence: true)
-
+  validates :username, presence: true
+  validates :firstName, presence: true
+  validates :lastName, presence: true
 
 end
